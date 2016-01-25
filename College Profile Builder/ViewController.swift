@@ -12,9 +12,19 @@ class ViewController:  UIViewController, UITableViewDataSource, UITableViewDeleg
 
 {
 
+    @IBOutlet weak var myTableView: UITableView!
+    
+    var college: [Colleges] = []
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        
+        college.append(Colleges(Name: "Stanford", Location: <#T##String#>, Number: <#T##Int#>, Image: <#T##UIImage#>))
        
     }
 

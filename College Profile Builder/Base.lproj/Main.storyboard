@@ -38,10 +38,31 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ub7-Kg-v2d"/>
+                    <connections>
+                        <outlet property="myTableView" destination="Tv6-rg-3Fe" id="rAr-UX-yCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1105" y="-400"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tRp-sC-4wc">
+            <objects>
+                <viewController id="KS0-Ju-Eaj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A5l-1m-MEt"/>
+                        <viewControllerLayoutGuide type="bottom" id="xOe-PY-gtE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ItP-Zc-aSw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujn-Uw-S0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="-400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4N-Ur-U1e">

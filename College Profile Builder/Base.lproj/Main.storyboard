@@ -43,6 +43,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KS0-Ju-Eaj" kind="show" id="DLe-D5-IhX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -60,6 +63,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ub7-Kg-v2d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="svM-om-WyA">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="gtF-qv-e6i"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vyI-rV-e0D">
                             <connections>
                                 <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="x9C-uL-9q9"/>
@@ -74,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="1105" y="-400"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tRp-sC-4wc">
             <objects>
-                <viewController id="KS0-Ju-Eaj" sceneMemberID="viewController">
+                <viewController id="KS0-Ju-Eaj" customClass="DetailViewController" customModule="College_Profile_Builder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A5l-1m-MEt"/>
                         <viewControllerLayoutGuide type="bottom" id="xOe-PY-gtE"/>
@@ -85,8 +93,41 @@
                     <view key="view" contentMode="scaleToFill" id="ItP-Zc-aSw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWp-Cc-NGe">
+                                <rect key="frame" x="0.0" y="64" width="248" height="160"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJb-HL-Ift">
+                                <rect key="frame" x="27" y="247" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-4F-TJj">
+                                <rect key="frame" x="27" y="285" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-sA-Tca">
+                                <rect key="frame" x="27" y="324" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O00-rI-0k7">
+                                <rect key="frame" x="101" y="371" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="iWG-OJ-cyu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="locationTextfield" destination="oI8-4F-TJj" id="uJt-Rw-MME"/>
+                        <outlet property="myImageView" destination="HWp-Cc-NGe" id="Dfp-Ik-gTZ"/>
+                        <outlet property="nameTextfield" destination="WJb-HL-Ift" id="ujz-OP-S13"/>
+                        <outlet property="numberTextfield" destination="UNJ-sA-Tca" id="PPD-de-3sF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujn-Uw-S0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

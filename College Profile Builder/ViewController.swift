@@ -32,15 +32,35 @@ class ViewController:  UIViewController, UITableViewDataSource, UITableViewDeleg
 
     @IBAction func addButtonTapped(sender: UIBarButtonItem)
     {
-        let myAlert = UIAlertController(title: "Add Colllege", message: nil, preferredStyle: .Alert)
+        let myAlert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         myAlert.addAction(cancelAction)
         let addAction = UIAlertAction(title: "Add", style: .Default) { (addAction) -> Void in
-            let collegeNameTextField = myAlert.textFields![0] as UITextField
-            let locationTextField = myAlert.textFields! [1] as UITextField
-            self.college.append(Colleges(Name: collegeNameTextField.text!, Location: collegeNameTextField.text!))
+            let collegeNameTextfield = myAlert.textFields![0] as UITextField
+            let locationTextfield = myAlert.textFields![1] as UITextField
+            let numberTextfield = myAlert.textFields![2] as UITextField
+            self.college.append(Colleges(Name: collegeNameTextfield.text!, Location: locationTextfield.text!, Number: (numberTextfield.text! as NSString).integerValue))
             self.myTableView.reloadData()
+        }
+        myAlert.addAction(addAction)
+        myAlert.addTextFieldWithConfigurationHandler { (collegeNameTextfield) -> Void in
+            collegeNameTextfield.placeholder = "Add a college name"
+        }
+        myAlert.addTextFieldWithConfigurationHandler { (locationTextfield) -> Void in
+            locationTextfield.placeholder = "Add a college location"
+        }
+        myAlert.addTextFieldWithConfigurationHandler { (numberTextfield) -> Void in
+            numberTextfield.placeholder = "Add the number of students"
+        }
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
     }
+    
+    @IBAction func editButtonTapped(sender: UIBarButtonItem)
+    {
+        myTableView.editing = !myTableView.editing
+    }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -77,6 +97,13 @@ class ViewController:  UIViewController, UITableViewDataSource, UITableViewDeleg
         college.insert(colleges, atIndex: destinationIndexPath.row)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let detailVC = segue.destinationViewController as! DetailViewController
+        let selectedRow = myTableView.indexPathForSelectedRow?.row
+        
+        detailVC.college = college[selectedRow!]
+    }
 
 }
 

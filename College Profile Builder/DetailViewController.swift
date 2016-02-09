@@ -8,7 +8,7 @@
 
 import SafariServices
 
-class DetailViewController: UIViewController, SFSafariViewControllerDelegate
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var nameTextfield: UITextField!
@@ -17,9 +17,11 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
     @IBOutlet weak var websiteTextField: UITextField!
     
     var college: Colleges!
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad()
     {
+        imagePicker.delegate = self
         super.viewDidLoad()
         
         nameTextfield.text = college.name
@@ -48,4 +50,19 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
     {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func changeImageButtonTapped(sender: UIButton)
+    {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) { () -> Void in
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.myImageView.image = selectedImage
+        }
+    }
+    
 }
+

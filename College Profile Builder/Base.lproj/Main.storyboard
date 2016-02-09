@@ -98,37 +98,44 @@
                                 <rect key="frame" x="0.0" y="64" width="248" height="160"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJb-HL-Ift">
-                                <rect key="frame" x="27" y="247" width="194" height="30"/>
+                                <rect key="frame" x="27" y="286" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-4F-TJj">
-                                <rect key="frame" x="27" y="285" width="194" height="30"/>
+                                <rect key="frame" x="27" y="324" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-sA-Tca">
-                                <rect key="frame" x="27" y="324" width="194" height="30"/>
+                                <rect key="frame" x="27" y="362" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O00-rI-0k7">
-                                <rect key="frame" x="101" y="371" width="46" height="30"/>
+                                <rect key="frame" x="101" y="400" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="iWG-OJ-cyu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wedsite URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwe-nW-DoZ">
-                                <rect key="frame" x="27" y="409" width="194" height="30"/>
+                                <rect key="frame" x="27" y="438" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-Kt-0nZ">
-                                <rect key="frame" x="68" y="461" width="112" height="30"/>
+                                <rect key="frame" x="68" y="476" width="112" height="30"/>
                                 <state key="normal" title="Go to Website"/>
                                 <connections>
                                     <action selector="websiteButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="Cep-H3-H8O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp3-qR-IMn">
+                                <rect key="frame" x="66" y="240" width="117" height="30"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="changeImageButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="1Gp-Vl-k4p"/>
                                 </connections>
                             </button>
                         </subviews>

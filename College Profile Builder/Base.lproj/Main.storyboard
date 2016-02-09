@@ -119,6 +119,18 @@
                                     <action selector="saveButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="iWG-OJ-cyu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wedsite URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwe-nW-DoZ">
+                                <rect key="frame" x="27" y="409" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-Kt-0nZ">
+                                <rect key="frame" x="68" y="461" width="112" height="30"/>
+                                <state key="normal" title="Go to Website"/>
+                                <connections>
+                                    <action selector="websiteButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="Cep-H3-H8O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -127,6 +139,7 @@
                         <outlet property="myImageView" destination="HWp-Cc-NGe" id="Dfp-Ik-gTZ"/>
                         <outlet property="nameTextfield" destination="WJb-HL-Ift" id="ujz-OP-S13"/>
                         <outlet property="numberTextfield" destination="UNJ-sA-Tca" id="PPD-de-3sF"/>
+                        <outlet property="websiteTextField" destination="wwe-nW-DoZ" id="Mj6-Gg-HDx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujn-Uw-S0T" userLabel="First Responder" sceneMemberID="firstResponder"/>

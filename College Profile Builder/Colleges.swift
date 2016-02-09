@@ -13,14 +13,17 @@ class Colleges: NSObject
     var location = ""
     var numberOfStudents = 0
     var image = UIImage(named: "default")
+    var webpage = ""
 
-    init(Name: String, Location: String, Number: Int, Image: UIImage)
+    init(Name: String, Location: String, Number: Int, Image: UIImage, Webpage: String)
     {
         super.init()
         name = Name
         location = Location
         numberOfStudents = Number
         image = Image
+        webpage = Webpage
+        
     }
     
     init(Name: String, Location: String, Number: Int)

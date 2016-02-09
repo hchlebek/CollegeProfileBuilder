@@ -24,9 +24,9 @@ class ViewController:  UIViewController, UITableViewDataSource, UITableViewDeleg
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        college.append(Colleges(Name: "Berkeley", Location: "Berkeley, CA", Number: 37581, Image: UIImage(named: "berkeley")!))
-        college.append(Colleges(Name: "University of Chicago", Location: "Chicago, IL", Number: 14467, Image: UIImage(named: "unichicago")!))
-        college.append(Colleges(Name: "Stanford", Location: "Stanford, CA", Number: 16136, Image: UIImage(named: "stanford")!))
+        college.append(Colleges(Name: "Berkeley", Location: "Berkeley, CA", Number: 37581, Image: UIImage(named: "berkeley")!, Webpage: "berkeley.edu"))
+        college.append(Colleges(Name: "University of Chicago", Location: "Chicago, IL", Number: 14467, Image: UIImage(named: "unichicago")!, Webpage: "uchicago.edu"))
+        college.append(Colleges(Name: "Stanford", Location: "Stanford, CA", Number: 16136, Image: UIImage(named: "stanford")!, Webpage: "stanford.edu"))
        
     }
 

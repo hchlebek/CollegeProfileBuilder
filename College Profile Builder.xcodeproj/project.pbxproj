@@ -16,6 +16,7 @@
 		3F798D961C4FF5FF0072FF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F798D941C4FF5FF0072FF8E /* LaunchScreen.storyboard */; };
 		3F798DA11C4FF5FF0072FF8E /* College_Profile_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F798DA01C4FF5FF0072FF8E /* College_Profile_BuilderTests.swift */; };
 		3F798DAC1C4FF5FF0072FF8E /* College_Profile_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F798DAB1C4FF5FF0072FF8E /* College_Profile_BuilderUITests.swift */; };
+		3FF39EC51C76343C009ED179 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF39EC41C76343C009ED179 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F798DA71C4FF5FF0072FF8E /* College Profile BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College Profile BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F798DAB1C4FF5FF0072FF8E /* College_Profile_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_BuilderUITests.swift; sourceTree = "<group>"; };
 		3F798DAD1C4FF5FF0072FF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF39EC41C76343C009ED179 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3F798D8D1C4FF5FF0072FF8E /* ViewController.swift */,
 				3F280B131C51500F004869BA /* Colleges.swift */,
 				3F280B151C5D8B1B004869BA /* DetailViewController.swift */,
+				3FF39EC41C76343C009ED179 /* MapViewController.swift */,
 				3F798D8F1C4FF5FF0072FF8E /* Main.storyboard */,
 				3F798D921C4FF5FF0072FF8E /* Assets.xcassets */,
 				3F798D941C4FF5FF0072FF8E /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				3F798D8E1C4FF5FF0072FF8E /* ViewController.swift in Sources */,
 				3F280B141C51500F004869BA /* Colleges.swift in Sources */,
 				3F798D8C1C4FF5FF0072FF8E /* AppDelegate.swift in Sources */,
+				3FF39EC51C76343C009ED179 /* MapViewController.swift in Sources */,
 				3F280B161C5D8B1B004869BA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

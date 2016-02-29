@@ -36,6 +36,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         college.name = nameTextfield.text!
         college.location = locationTextfield.text!
         college.numberOfStudents = Int(numberTextfield.text!)!
+        college.image = myImageView.image
         college.webpage = websiteTextField.text!
     }
     
@@ -62,6 +63,13 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
             let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             self.myImageView.image = selectedImage
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let mapVC = segue.destinationViewController as! MapViewController
+        
+        mapVC.college = college
     }
     
 }

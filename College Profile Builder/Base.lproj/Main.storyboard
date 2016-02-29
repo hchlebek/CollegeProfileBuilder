@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BET-R7-EDw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -138,6 +139,13 @@
                                     <action selector="changeImageButtonTapped:" destination="KS0-Ju-Eaj" eventType="touchUpInside" id="1Gp-Vl-k4p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kj7-3R-SSj">
+                                <rect key="frame" x="109" y="514" width="30" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="Gpq-ve-AFA" kind="show" id="rF6-w9-WCB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -152,6 +160,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujn-Uw-S0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1739" y="-400"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="RGa-VU-ijQ">
+            <objects>
+                <viewController id="Gpq-ve-AFA" customClass="MapViewController" customModule="College_Profile_Builder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7AP-fh-V6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="NwD-x1-f1E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hiP-PV-X5d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-L7-yuD">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8l-pL-ygQ">
+                                <rect key="frame" x="8" y="72" width="279" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwM-bR-BQd">
+                                <rect key="frame" x="295" y="72" width="71" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="Gpq-ve-AFA" eventType="touchUpInside" id="JgO-49-STe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NwD-x1-f1E" firstAttribute="top" secondItem="5Gr-L7-yuD" secondAttribute="bottom" id="VZu-8p-kI8"/>
+                            <constraint firstItem="5Gr-L7-yuD" firstAttribute="top" secondItem="7AP-fh-V6g" secondAttribute="bottom" id="gBW-SR-KH2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Gr-L7-yuD" secondAttribute="trailing" constant="-20" id="rPI-LX-EN2"/>
+                            <constraint firstItem="5Gr-L7-yuD" firstAttribute="leading" secondItem="hiP-PV-X5d" secondAttribute="leadingMargin" constant="-20" id="wGC-4R-mdF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="5Gr-L7-yuD" id="MOq-dp-ChE"/>
+                        <outlet property="myTextField" destination="W8l-pL-ygQ" id="Ajz-dU-Ls2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYZ-Ne-LVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="-400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4N-Ur-U1e">
